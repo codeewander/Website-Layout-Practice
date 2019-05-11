@@ -1,0 +1,22 @@
+@mixin media_mobile {
+    @media all and (min-width: $width-mobile) {
+        @content;
+    }
+}
+@mixin media_ipad {
+    @media all and (min-width: $width-ipad) {
+        @content;
+    }
+}
+@mixin media_laptop {
+    @media all and (min-width: $width-laptop) {
+        @content;
+    }
+}
+
+@mixin media_pc{
+    @media all and (min-width: $width-pc){
+        @content;
+    }
+}
+

@@ -1,0 +1,27 @@
+$width-phone: 480px;
+$width-ipad: 768px;
+$width-laptop: 960px;
+$width-pc: 1200px;
+
+
+@mixin media_mobile {
+    @media all and (min-width: $width-phone) {
+        @content;
+    }
+}
+@mixin media_ipad {
+    @media all and (min-width: $width-ipad) {
+        @content;
+    }
+}
+@mixin media_laptop {
+    @media all and (min-width: $width-laptop) {
+        @content;
+    }
+}
+
+@mixin media_pc{
+    @media all and (min-width: $width-pc){
+        @content;
+    }
+}

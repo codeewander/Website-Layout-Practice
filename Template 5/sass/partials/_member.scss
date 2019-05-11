@@ -1,0 +1,62 @@
+
+#member{
+	position: relative;
+	@extend %py-2;
+
+	h3{
+		text-align: center;
+		line-height: 5rem;
+		@include font($meet-the-folks-font-size, $color-member-title, $font-family-serif, normal)
+	}
+
+	.members-detail{
+		width: 100%;
+		margin: 0 auto; 
+		@include grid(repeat(1, 1fr), repeat(4, 1fr));
+		@include media_ipad {
+			@include grid(repeat(2, 1fr), repeat(2, 1fr));
+			width: 60vw;
+		}
+		
+		img{
+			width: 100%;
+		}
+
+		h4{
+			text-align: center;
+			line-height: 3rem;
+			@include font($member-name-font-size,$color-member-title,$font-family-serif,6px);
+			// @extend %py-1;
+		}
+
+		p{
+			text-align: center;
+			padding-bottom: 2rem;
+			@include font($member-job-font-size,black,$font-family-sans-serif,normal);
+		}
+	}
+
+	.contact-button{
+		@include button(18px,white,black,0.5rem,2rem,0,auto);
+		border: 0;
+	}
+}
+
+
+.slogan-text{
+	
+	.slogan{
+		background: $color-bg-slogan;
+		text-align: center;
+		line-height: 2rem;
+		@include font($slogan-font-size, $color-default, $font-family-sans-serif, normal);
+		@extend %py-1;
+	} 
+
+	.triangle{
+		@include triangle-down;
+		margin-left: calc(50% - 25px);
+		margin-top: -1px;
+	}
+}
+

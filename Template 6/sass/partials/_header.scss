@@ -1,0 +1,110 @@
+@import "modules/_color";
+@import "modules/_font";
+@import "modules/_mixins";
+@import "modules/_extends";
+@import "modules/_mediaquery";
+
+//body
+
+body{
+	background-image: url(../images/bg.jpg);
+
+	.header-background{
+		@extend %footer_header_black-background;
+		height: 65px;
+		top: 0;
+	}
+	.container{
+		padding-left: 40px;
+		padding-right: 40px;		
+	}
+}
+
+//header
+
+header{	
+	margin-top: 6px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border: 1px solid $color-normal-gray;
+	@extend %sub-background;
+	@include padding-y-direction(15px);
+
+	.logo{
+		padding-bottom: 10px;
+		margin: 0 auto;
+		@include media_ipad{
+		margin: 0;
+		}
+		img{
+			width: 100%;
+			max-width: 329px;
+		}
+	}
+}
+
+.icons-and-contact{
+	text-align: center;
+	width: 100%;
+	@include media_ipad {
+		text-align: right;
+		width: 45%;
+	}
+	
+	.icon-fb{
+		@extend %social-media-icon;
+		background-position: 0px 54px;
+		&:hover{
+			background-position: 0px 27px;
+		}
+	}
+
+	.icon-tumblr{
+		@extend %social-media-icon;
+		background-position: 139px 54px;
+		&:hover{
+			background-position: 139px 27px;
+		}
+	}
+
+
+	.icon-flickr{
+		@extend %social-media-icon;
+		background-position: 103px 54px;
+		&:hover{
+			background-position: 103px 27px;
+		}
+	}
+
+	.icon-dribbble{
+		@extend %social-media-icon;
+		background-position: 65px 54px;	
+		&:hover{
+			background-position: 65px 27px;
+		}
+	}
+
+	.icon-rss{
+		@extend %social-media-icon;
+		background-position: 27px 54px;
+		&:hover{
+			background-position: 27px 27px; 
+		}
+	}	
+
+	.contact-phone{
+		line-height: 32px;
+		font-size: 14px;
+	}
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+
+@mixin font($font-size: $font-size-default, $color: $color-default, $font-family: $font-family-serif, $letter-space: normal){
+	color: $color;
+	font-family: $font-family;
+	font-size: $font-size;
+	letter-spacing: $letter-space;
+}
+
+@mixin grid($columns, $rows){
+	display: grid;
+	grid-gap: 0px;
+	font-size: 0;
+	grid-template-columns: $columns ;
+	grid-template-rows: $rows;
+}
+
+// @mixin hover($color,$color-background:transparent, $opacity:1){
+// 	color: $color;
+// 	background-color: $color-background;
+// 	opacity: $opacity;
+// 	transition: 1s;
+// 	cursor: pointer;
+// }
+
+@mixin button($font-size, $color,$bg-color,$padding-y,$padding-x,$margin-y,$margin-x){
+	font-size: $font-size;
+	border-radius: 0;
+	display: block;
+	color: $color;
+	background-color: $bg-color;
+	padding: $padding-y $padding-x;
+	margin: $margin-y $margin-x;
+}
+
+
+@mixin locate($left, $top){
+	position: absolute;
+	left: $left;
+	top: $top;
+}
+
+@mixin bg-img($width, $height){
+	width: $width;
+	height: $height;
+}
+
+
+
+
+
+
+
+

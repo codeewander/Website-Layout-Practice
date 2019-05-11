@@ -1,0 +1,63 @@
+
+#portfolio{	
+	position: relative;
+	.label{
+		@include locate(50%, auto);
+		transform: translate(-50%,-100%);
+		z-index: 1;
+
+		.portfolio-title{
+			background-color: $color-bg-label;
+			width: 300px;
+			text-align: center;
+			@include font($work-client-font-size, $color-default, $font-family-sans-serif, 2px);
+			@extend %py-1;		
+		}
+
+		.triangle{
+			@include triangle-down;
+			@include locate(calc(50% - 25px), 51px);
+		}
+	}
+
+	.projects-group{
+		@include grid(repeat(1, 1fr), repeat(12, 1fr));
+		@include media_mobile {
+			@include grid(repeat(2, 1fr), repeat(6, 1fr));
+		}
+		@include media_ipad {
+			@include grid(repeat(3, 1fr), repeat(4, 1fr));
+		}
+		@include media_laptop {
+			@include grid(repeat(4, 1fr), repeat(3, 1fr));
+		}
+
+		.project{
+			position: relative;
+		
+			img{
+				width:100%;
+			}
+
+			.project-text{
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				@include font($project-font-size,$color-default,$font-family-sans-serif,normal);
+				@include locate(0, 0); 
+
+				&:hover{
+					opacity: 0.5;
+					cursor: pointer;
+					transition: 1s;
+					background-color: $color-text-hover-project;
+				}
+			}			
+		}
+	}
+}
+
+	

@@ -1,0 +1,66 @@
+
+#intro{
+	background-image: url(../images/seahorse-bg.jpg);
+	background-attachment: fixed;
+	@extend %py-2;
+	@extend %bg-img-basic;
+
+	h2{
+		@include font($intro-title-font-size,white,$font-family-serif,normal);
+		line-height: 4rem;
+	}
+
+	p{
+		@include font($intro-text-font-size,white,$font-family-sans-serif,normal);
+		line-height: 1.5rem;
+		padding-bottom: 1rem;
+	}
+
+	.back-button{
+	@include button(18px,black,white,0.5rem,2rem,0,auto);
+	}
+}
+
+
+.intro-container{
+	max-width: 85vw;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.intro-column-first{
+		width: 100%;
+		@include media_ipad {
+			width: 45%;
+		}
+	}
+
+	.intro-column-last{
+		width: 100%;
+		padding-top: 0px;	
+		@include media_ipad {
+			width: 45%;
+			padding-top: 200px;
+		}
+	}	
+}
+
+//dot group//	
+.dot-group{
+	text-align: center;
+
+	.dot{
+	@include dot(20px, 20px);
+	display:inline-block;
+	}
+}
+
+.hidden{
+	visibility: visible;
+	@include media_ipad {
+		visibility: hidden;
+	}
+}
+
+

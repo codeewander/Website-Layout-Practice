@@ -1,0 +1,8 @@
+
+@mixin dot($margin-Y: 20px, $margin-X: auto){
+    width: 10px;
+    height: 10px;
+	border-radius: 50%; 
+    margin: $margin-Y $margin-X;
+    background-color: white;
+}

@@ -1,0 +1,153 @@
+@import "modules/_color";
+@import "modules/_mixins";
+@import "modules/_extends";
+@import "modules/_mediaquery";
+@import "modules/_font";
+
+#navigation{
+	margin-top: 16px;
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+	@include padding-x-direction(0px);
+}
+
+.search-bar{
+width: 100%;	
+background-color: $searchbar-bg;
+padding: 5px 10px;
+box-shadow: -3px 0 7px $color-normal-gray;
+@include media_laptop {
+		width: 27%;
+	}
+
+	input{
+		line-height: 44px;
+		background-color: $color-light-gray;
+		background-image: url(../images/search.png);
+		background-repeat: no-repeat;
+		background-position: right 10px center;
+		width: 100%;	
+		border: none;	
+	}
+}
+
+
+.navbar{
+	background-color: white;
+	width: 100%;
+	padding: 0px;
+	box-shadow: -3px 0 6px $color-normal-gray;
+	@include media_laptop {
+		width: 73%;
+	}
+	&-toggler{
+		margin: 2px 9px;
+	}
+	
+	.nav-item{
+		border-right: 1px solid $color-light-gray;
+		&:last-child{
+			border: none;
+		}
+
+		.nav-link{
+			line-height: 40px;
+			color: black ;
+
+			@include padding-x-direction(20px);
+			&:hover{
+				background-color: $color-light-green;
+				color: white;
+			}
+		}
+	}	
+}
+
+
+
+// 手刻漢堡//
+
+// 	.menu{
+// 		background-color: white;
+// 		width: 100%;
+// 		clear: both;
+// 		@include media_laptop {
+// 			width: 64%;
+// 			max-height: 54px;
+// 		}
+
+// 		&-icon{
+// 			cursor: pointer;
+// 			display: inline-block;
+// 			float: left;
+// 			padding: 28px 20px;
+// 			position: relative;
+// 			@include media_laptop {
+// 				display: none;
+// 			}
+// 			.navicon {
+// 				@include burger();
+// 			}
+// 		}
+// 		&-btn{
+// 			display: none;
+// 			&:checked ~ ul{
+// 				max-height: 280px;
+// 			}
+// 		}
+
+// 		&-content{
+// 			overflow: hidden;
+// 			width: 100%;
+// 			max-height: 0;
+// 			clear: both;
+// 			@include media_laptop {
+// 				float: right;
+// 				clear: none;
+// 				max-height: none;
+// 				width: 100%;
+// 			}
+// 			>li {
+// 				position: relative;
+// 				@include media_laptop{
+// 				float: left;
+// 				border-right: 1px solid #D8CFCF;
+// 				}
+				
+// 				a{
+// 					display: inline-block;
+// 					padding: 20px 20px;
+// 					color: black;
+// 					font-size: 14px;
+// 					font-weight: bold;
+// 					text-decoration: none;
+// 					&:hover{
+// 						background-color: #80B600;
+// 						color: white;
+// 						display: block;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}	
+// }
+
+// .menu-second-layer{
+// 	display: none;
+// 	font-size: 16px;
+// }	
+
+// .menu-content li:hover > ul {
+	
+//     background-color: $color-light-gray;
+//     display: block;
+//     position: absolute;
+//     z-index: 1;
+//     @include media_laptop {
+//     position: relative;   
+//     }
+// }
+			
+
+

@@ -1,0 +1,24 @@
+@mixin padding-y-direction($py){
+	padding-top: $py;
+	padding-bottom: $py;
+}
+
+@mixin padding-x-direction($px){
+	padding-left: $px;
+	padding-right: $px;
+}
+
+// @mixin dialogue-triangle($left, $bottom){
+// 	position: absolute;
+// 	border-left: 40px solid #E6E6E6;
+// 	border-bottom: 24px solid transparent;
+// 	left: $left;
+// 	bottom: $bottom;
+// }
+
+// @mixin flex($justify, $direction:row){
+// 	display: flex;
+// 	flex-wrap: wrap;
+// 	flex-direction: $direction;
+// 	justify-content: $justify;
+// }

@@ -1,0 +1,19 @@
+@import "modules/_color";
+@import "modules/_font";
+@import "modules/_mixins";
+@import "modules/_extends";
+@import "modules/_mediaquery";
+@import "partials/_buttons";
+
+#banner{
+	@include padding-x-direction(0px);
+	
+	.carousel-control-prev{
+		@include carousel-control-button(url(../images/slider_prev.gif));			
+	}
+
+	.carousel-control-next{
+		@include carousel-control-button(url(../images/slider_next.gif));		
+	}
+}
+

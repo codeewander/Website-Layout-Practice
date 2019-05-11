@@ -1,0 +1,28 @@
+%sub-background{
+	background-image: url(../images/subbg.gif);
+	background-repeat: repeat;
+}
+
+%footer_header_black-background{
+	background: black;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+%social-media-icon{
+	display: inline-block;
+	height: 27px;
+	width: 27px;
+	cursor: pointer;
+	background-image: url(../images/social.png);
+}
+
+%footer-contact-form{
+	width: 100%;
+	margin-bottom: 1rem;
+	background-color: $color-light-gray;
+	border-radius: 3px;
+	border: 1px solid $border-light-gray;
+}
+

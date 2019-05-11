@@ -1,0 +1,62 @@
+
+#banner{
+	background-image: url(../images/banner.png);
+	@extend %bg-img-basic;
+	@include bg-img(100%, calc(100vh - 48px));
+
+	.banner-title{
+		text-align: center;
+		padding-top: 10vh;
+
+		h1{
+			padding-bottom: 1rem;
+			font-style: italic;
+			@include font($web-folk-font-size, white, $font-family-serif,7px);
+		
+			@include media_ipad {
+				font-size: 60px;
+			}
+			@include media_pc {
+				font-size: 70px;
+			}
+
+			span{
+				font-family: $folk-font-family;
+			}
+		}
+		
+		h2{
+			@include font($studio-font-size, white, $font-family-serif);
+			letter-spacing: 7px;
+			@include media_ipad {
+				font-size: 24px;
+			}
+			@include media_pc {
+				font-size: 28px;
+			}
+		}
+	}
+
+	p{
+		text-align: center;
+		width: 90vw;
+		line-height: 1.5rem;
+		margin: 15vh auto;
+		@include font($banner-text-font-size, white, $font-family-serif, 2px);	
+		@include media_ipad {
+			font-size: 20px;
+			width: 55vw;
+		}
+		@include media_pc {
+			font-size: 26px;
+			line-height: 3rem;
+			margin: 14vh auto;
+		}
+		
+	}
+
+	.dot{
+		@include dot(4vh, auto);
+		display: block;
+	}
+}

@@ -1,0 +1,24 @@
+
+footer{
+	background: $color-footer;
+	text-align: center;
+
+	p{
+	font-size: $footer-font-size;	
+	line-height: 2rem;
+	@include media_mobile{
+		line-height: 5rem;
+	}
+
+		a{
+			color: $color-footer-link;
+		}
+
+		span{
+			display: block;
+			@include media_mobile{
+				display: inline-block;
+			};
+		} 
+	} 
+}

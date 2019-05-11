@@ -1,0 +1,205 @@
+@import "modules/_color";
+@import "modules/_font";
+@import "modules/_mixins";
+@import "modules/_extends";
+@import "modules/_mediaquery";
+@import "partials/_buttons";
+
+#main-content{
+	background: url(../images/subbg.gif);
+	border: 1px solid $border-light-gray; 
+}
+
+#cards-group{
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: center;
+	margin-top: -30px;
+
+	.card{
+		height: 100%;
+		background-color: $color-card-bg;
+		border: 1px solid $border-light-gray;
+		border-radius: 0;
+		width: 100%; 
+		margin-bottom: 40px;
+
+		@include media_mobile{
+			width: 47%
+		}
+
+		@include media_pc{
+			width: 22%;
+		}
+
+		&:hover{
+			background-color: $color-card-bg-hover;
+			color: $color-font-card-hover;
+			border: 1px solid black;
+		}
+
+		.card-body{
+			position: relative;
+			padding-bottom: 110px;
+			@include media_mobile{
+				padding-bottom: 140px;
+				max-height: 440px;
+			}	
+			@include media_ipad{
+				padding-bottom: 110px;
+				max-height: 370px;
+			}
+			@include media_pc{
+				max-height: 420px;
+				padding-bottom: 120px;
+			}	
+			.card-main-title{
+				height: 42px;
+			}
+			img{
+				padding: 15px;
+			}
+
+			button{
+				@include card-button;
+			}
+		}	
+	}	
+}
+	
+//welcome
+#information{
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@include padding-y-direction(40px);
+	a{
+		color: black;
+	}
+	#introduction{
+		width: 100%;
+		@include media_ipad{
+			width: 47%;
+		}
+		@include media_pc{
+			width: 33.33%;
+			padding-right: 30px;
+		}
+		img{
+			width: 100%;
+			padding-bottom: 16px;
+		}
+	}	
+}
+
+// why choose us
+#choose-reasons{
+	width: 100%;		
+		@include media_ipad{
+			width: 47%;
+		}
+		@include media_pc{
+			width: 33.33%;
+			padding-right: 30px;
+		}
+	.choose-content{
+		padding: 10px;
+		border-bottom: 1px solid #d9d9d9;
+		&::after{
+			content:"";
+			clear: both;
+			display: block;
+		}
+
+		p{
+			padding-top: 12px;
+			line-height: 1rem;
+		}
+		.choose-icon{
+			background-image: url(../images/h3_plus.png);
+			width: 48px;
+			height: 48px;
+			margin-right: 16px;
+			float: left;
+			&:hover{
+				background-image: url(../images/h3_minus.png);
+				cursor: pointer;
+			}		
+		}	
+	}
+}
+
+
+#news{
+	width: 100%;
+		@include media_ipad{
+			width: 100%;
+		}
+		@include media_pc{
+			width: 33.33%;
+		}
+	
+	.article{
+		padding-bottom: 40px;
+		display: flex;
+		justify-content: space-between;
+
+		>div{
+		width: 45%;
+			img{
+			width: 100%;
+			}
+		}	
+		
+		.news-date{
+			display: inline-block;
+			background-color: $color-light-green;
+			color: $color-font-news-date;
+			padding: 8px;
+			margin-bottom: 16px;	
+		}
+	}
+}
+
+//featured works
+#portfolio{
+	.feature-control{
+		float: right;
+		padding-top: 18px;
+		a{
+			color: $color-normal-gray;
+			font-size: 14px;
+			padding-right: 6px;
+		}
+	}
+	.feature-work{
+		padding-bottom: 40px;
+		img{
+			width: 100%;
+		}
+	}
+	
+	.images-gallery{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.feature-work{
+			width: 100%;
+			@include media_ipad{
+			width: 47%;
+			}
+			@include media_pc{
+			width: 22%
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+

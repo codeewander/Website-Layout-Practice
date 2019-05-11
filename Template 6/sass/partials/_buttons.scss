@@ -1,0 +1,76 @@
+// card-button
+@import "modules/_color";
+
+@mixin button($px,$py,$bg-color,$font-color){
+  padding: $px $py;
+  background-color: $bg-color;
+  color: $font-color;
+  border: none;
+}
+
+@mixin card-button{
+    background-color: #CECECE;
+    padding: 5px 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    border: none;
+}
+
+@mixin carousel-control-button($background-image){
+  background-image: $background-image;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-position: 0 15%;
+  @include media_mobile{
+    height: 119px;
+    background-position: top;
+  }
+  &:hover{
+      background-position-y: -119px; 
+  }
+
+
+}
+
+
+
+
+
+// burger-button
+
+// @mixin burger(){
+// 	background: #333;
+//   	display: block;
+//   	height: 2px;
+//   	position: relative;
+//   	width: 18px;
+
+//   	&::before{
+//   		background: #333;
+//   		content: '';
+//   		display: block;
+//   		height: 100%;
+//  		position: absolute;
+//   		width: 100%;
+//   		top: 5px;
+//   	}
+//   	&::after{
+//   		background: #333;
+//   		content: '';
+//   		display: block;
+//   		height: 100%;
+//   		position: absolute;
+//   		width: 100%;
+//   		top: -5px;
+//   	}
+// }
+	
+
+
+

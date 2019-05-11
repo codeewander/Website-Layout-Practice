@@ -1,49 +1,11 @@
-*{
-	margin: 0;
-	padding: 0;
-}
-
+/* header */
 header{
 	background-color: #525050;
 	height: 104px;
 	text-align: center;
 }
 
-.head{
-	width: 926px;
-	position: relative;
-	text-align: left;
-	display: inline-block;
-}
-
-.menu{
-    display: inline-block;
-    margin-left: 30px;
-}
-
-#home{
-	font-weight: bold;
-}
-
-.menu li{
-	display: inline-block;
-	color: #bdbcbc;
-	font-size: 13px;
-	padding: 0 30px;
-}
-
-.menu li:hover{
-	cursor: pointer;
-}
-
-#shop{
-	width: 30px;
-	position: absolute;
-	top: 35px;
-	right: 5px;
-}
-
-.logo{
+header .logo{
 	color: #bdbcbc;
 	font-size: 20px;
 	line-height: 104px;
@@ -51,7 +13,42 @@ header{
 	font-weight: 800;
 }
 
-.banner{
+header .header-container{
+	width: 926px;
+	position: relative;
+	text-align: left;
+	display: inline-block;
+}
+
+header .menu{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+header .menu li:first-child a{
+	font-weight: bold;
+}
+
+header .menu li{
+	display: inline-block;
+	color: #bdbcbc;
+	font-size: 13px;
+	padding: 0 30px;
+}
+
+header .menu li:hover{
+	cursor: pointer;
+}
+
+header .shop-icon{
+	width: 30px;
+	position: absolute;
+	top: 35px;
+	right: 5px;
+}
+/* main */
+
+#banner .banner-container{
 	background-image: url("img/cover.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -61,26 +58,22 @@ header{
 
 }
 
-.banner-text{
+#banner .banner-text{
 	height: 200px;
 	width: 600px;
 	background-color: rgb(229, 224, 215, 0.5);
 	position: absolute;
-    top: calc(50% - 100px);
-    text-align: center;
+  top: calc(50% - 100px);
 	left: calc(50% - 300px);
+  text-align: center;
 }
 
-.banner-text p{
-	font-size:30px;	
-}
-
-.banner-text h1{
+#banner .banner-text h1{
 	padding: 20px 0px;
 	font-size: 60px;
 }
 
-button{
+#banner .banner-text button{
 	background-color: black;
 	color: white;
 	font-size: 18px;
@@ -89,7 +82,7 @@ button{
 	cursor: pointer;
 }
 
-.banner_bottom{
+#banner .banner-tip{
 	background-color: #E4E4E4;
 	text-align: center;
 	color: black;
@@ -98,152 +91,141 @@ button{
 	letter-spacing: 2px;
 }
 
-.information{
+
+#sell-items .title-wrap{
 	text-align: center;
 }
 
-.information h2{
+#sell-items .title{
 	font-family: PT serif;
 	padding: 65px 0px 30px 15px;
 	letter-spacing: 12px;
 	font-size: 35px;
 }
 
-.information h3{
+#sell-items .subtitle{
 	font-weight: 100;
 	font-size: 20px;
 	letter-spacing: 4px;
 	padding-bottom: 70px;
 }
 
-hr{
+#sell-items hr{
 	width: 40px;
 	margin: auto;
 	margin-bottom: 32px;
 }
 
-.photo{
+#sell-items .items{
 	width: 1000px;
 	margin: 0 auto;
 	text-align: center;
 	padding-bottom: 100px;
-
 }
 
-.demo-dress{
+#sell-items .item{
+	width: 300px;
+	height: 450px;
+	display: inline-block;
+	background-position: center;
+}
+
+#sell-items .pic-dress{
 	background-image: url(img/left.png);
-	width: 300px;
-	height: 450px;
-	display: inline-block;
-	background-position: center;
 }
 
-.demo-bag{
+#sell-items .pic-bag{
 	background-image: url(img/middle.png);
-	width: 300px;
-	height: 450px;
-	display: inline-block;
-	background-position: center;
 }
 
-.demo-glass{
-	background-image: url(img/right.png);
-	width: 300px;
-	height: 450px;
-	display: inline-block;
-	background-position: center;
+#sell-items .pic-glass{
+	background-image: url(img/right.png);	
 }
 
+/* footer */
 footer{
 	background-color: #525050;
 	height: 150px;
 	text-align: center;
 	padding-top: 75px;
+	padding-bottom: 30px;
+	color: white;
+	font-size: 12px;
 }
 
-footer p {
- 	font-size: 10px;
- 	color: white;
- 	letter-spacing: 2px;
-
+footer .footer-title{
+	font-size: 12px;
+	letter-spacing: 2px;
 }
 
-.footer-connected{
+footer .social{
 	display: inline-block;
 	width: 300px;
 	text-align: left;
 }
 
-.footer-connected p{
-	color: white;
-	width: 300px;
-	padding-left: 28px;
+footer .social-container{
+	width: 200px;
+	margin: 0 auto;
 }
 
-.footer-connected a{
-	color: white;
-	text-decoration: none;
+footer .social-title {
+	padding-left: 10px;
+}
+
+footer .social a{
 	font-size: 17px;
-	margin-left: 28px;
-	margin-top: 11px;
+	padding: 10px;
 }
 
-.footer-form{
+footer .newsletter{
 	vertical-align: top;
-	width: 310px;
+	width: 300px;
 	display: inline-block;
 	letter-spacing: 1px;
-}
-
-form{
 	font-size: 12px;
 	text-align: left;
-	color: white;
 }
 
-input[type=text]{
+footer .newsletter input[type=text]{
 	margin: 8px 0px;
 	border: 1px solid white;
 	background: transparent;
-	padding: 4px 154px 9px 5px;
+	width: 100%;
+	height: 30px;
 	text-align: left;
-	color: white;
 	font-size: 14px;
+	box-sizing: border-box;
+	padding-left: 10px;
 }
 
-input[type=submit]{
+footer .newsletter button{
     background-color: #e7e3e0;
     padding: 5px 10px;
     cursor: pointer;
-    margin-left: 224px;
+    display: block;
+		margin-left: auto;
 }
-input::placeholder { 
+
+footer .newsletter input::placeholder { 
     color: white;
     opacity: 1; 
 }
 
-
-.footer-contact{
+footer .contact{
 	vertical-align: top;
 	width: 300px;
 	display: inline-block;
 }
 
-.footer-contact p{
-	padding-bottom: 10px;
+footer .contact p{
+	padding-bottom: 5px;
 }
 
-.copyright{
+footer .copyright{
 	padding-top: 30px;
 }
 
-.footer-title{
-	color: #E7E3E0;
-	letter-spacing: 5px;
-}
-
-#wix{
-	text-decoration: none;
-	color: white;
+footer .copyright a{
 	border-bottom: 1px solid black;
 }

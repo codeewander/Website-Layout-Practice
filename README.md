@@ -1,4 +1,4 @@
-# Website Layout Practice 切版練習
+# Website Layout Practice 
 2018.11-2018.12
 convert PSD design template to website using HTML,CSS,Bootstrap and SCSS
 
